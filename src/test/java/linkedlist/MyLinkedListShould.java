@@ -19,4 +19,10 @@ public class MyLinkedListShould {
 	public void be_empty_by_default() {
 		assertThat(sut.size(), is(0));
 	}
+
+	@Test
+	public void have_one_element_after_adding_one_element() {
+		sut.add("anyString");
+		assertThat(sut.size(), is(1));
+	}
 }
