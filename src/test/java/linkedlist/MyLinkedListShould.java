@@ -36,4 +36,10 @@ public class MyLinkedListShould {
 	public void not_find_an_element_on_an_empty_list() {
 		assertThat(sut.contains("anyString"), is(false));
 	}
+
+	@Test
+	public void not_find_a_non_existing_item() {
+		sut.add("otherString");
+		assertThat(sut.contains("anyString"), is(false));
+	}
 }
