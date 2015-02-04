@@ -44,10 +44,17 @@ public class MyLinkedListShould {
 	}
 
 	@Test
-	public void find_another_existing_element() {
+	public void acceptance_test() {
 		sut.add("string1");
+		assertThat(sut.size(), is(1));
 		sut.add("string2");
+		assertThat(sut.size(), is(2));
+		sut.add("string3");
+		assertThat(sut.size(), is(3));
 		assertThat(sut.contains("string1"), is(true));
+		assertThat(sut.contains("string2"), is(true));
+		assertThat(sut.contains("string3"), is(true));
+
 	}
 
 }
