@@ -42,4 +42,12 @@ public class MyLinkedListShould {
 		sut.add("otherString");
 		assertThat(sut.contains("anyString"), is(false));
 	}
+
+	@Test
+	public void find_another_existing_element() {
+		sut.add("string1");
+		sut.add("string2");
+		assertThat(sut.contains("string1"), is(true));
+	}
+
 }
