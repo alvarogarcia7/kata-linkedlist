@@ -12,5 +12,4 @@ public class MyLinkedListShould {
 		final MyLinkedList sut = new MyLinkedList();
 		assertThat(sut.size(), is(0));
 	}
-
 }
