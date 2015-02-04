@@ -25,4 +25,10 @@ public class MyLinkedListShould {
 		sut.add("anyString");
 		assertThat(sut.size(), is(1));
 	}
+
+	@Test
+	public void find_an_existing_element() {
+		sut.add("anyString");
+		assertThat(sut.contains("anyString"), is(true));
+	}
 }
