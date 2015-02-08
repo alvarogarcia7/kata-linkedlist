@@ -14,11 +14,18 @@ public class EmptyNode implements Node {
 		return 0;
 	}
 
-	public String getDebugValues() {
+	public String toString() {
 		return null;
 	}
 
 	public String at(final int index) {
+		return null;
+	}
+
+	public Node addAt(final int index, final String string) {
+		if (index == 0) {
+			return add(string);
+		}
 		return null;
 	}
 

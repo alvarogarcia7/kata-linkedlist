@@ -23,8 +23,9 @@ public class LinkedNode implements Node {
 		return 1 + node.size();
 	}
 
-	public String getDebugValues() {
-		return value + ", " + node.getDebugValues();
+	@Override
+	public String toString() {
+		return value + ", " + node.toString();
 	}
 
 	public String at(final int index) {
@@ -32,6 +33,16 @@ public class LinkedNode implements Node {
 			return value;
 		} else {
 			return node.at(index - 1);
+		}
+	}
+
+	public Node addAt(final int index, final String string) {
+		if (0 == index) {
+			final LinkedNode newNode = new LinkedNode(string);
+			newNode.node = this;
+			return newNode;
+		} else {
+			return node.addAt(index - 1, string);
 		}
 	}
 

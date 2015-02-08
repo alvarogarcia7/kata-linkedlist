@@ -8,8 +8,10 @@ public interface Node {
 
 	Integer size();
 
-	String getDebugValues();
+	String toString();
 
 	String at(int index);
+
+	Node addAt(int index, String string);
 
 }
