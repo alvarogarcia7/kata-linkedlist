@@ -44,7 +44,7 @@ public class MyLinkedListShould {
 	}
 
 	@Test
-	public void insert_at_the_end() throws Exception {
+	public void insertAt_the_end() throws Exception {
 		sut.add("otherString");
 
 		sut.addAt(1, "myString");
