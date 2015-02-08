@@ -64,6 +64,18 @@ public class MyLinkedListShould {
 	}
 
 	@Test
+	public void insertAt_the_middle() throws Exception {
+		sut.add("s1");
+		sut.add("s2");
+
+		sut.addAt(1, "myString");
+
+		assertThat(sut.at(0), is("s1"));
+		assertThat(sut.at(1), is("myString"));
+		assertThat(sut.at(2), is("s2"));
+	}
+
+	@Test
 	public void acceptance_test() {
 		sut.add("string1");
 		assertThat(sut.size(), is(1));
