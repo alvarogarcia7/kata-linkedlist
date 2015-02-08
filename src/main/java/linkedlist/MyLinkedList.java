@@ -24,4 +24,14 @@ public class MyLinkedList {
 	public String toString() {
 		return "[" + node.toString() + "]";
 	}
+
+	public void addAt(final int index, final String string) {
+		// TODO Auto-generated method stub
+
+	}
+
+	public String at(final int index) {
+		// TODO Auto-generated method stub
+		return null;
+	}
 }

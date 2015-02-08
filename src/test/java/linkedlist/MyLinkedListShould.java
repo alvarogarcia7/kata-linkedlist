@@ -44,6 +44,16 @@ public class MyLinkedListShould {
 	}
 
 	@Test
+	public void insert_at_any_position() throws Exception {
+		sut.add("otherString");
+
+		sut.addAt(1, "myString");
+		assertThat(sut.at(0), is("otherString"));
+		assertThat(sut.at(1), is("myString"));
+
+	}
+
+	@Test
 	public void acceptance_test() {
 		sut.add("string1");
 		assertThat(sut.size(), is(1));
