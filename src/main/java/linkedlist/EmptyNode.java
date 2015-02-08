@@ -18,4 +18,8 @@ public class EmptyNode implements Node {
 		return null;
 	}
 
+	public String at(final int index) {
+		return null;
+	}
+
 }

@@ -26,12 +26,10 @@ public class MyLinkedList {
 	}
 
 	public void addAt(final int index, final String string) {
-		// TODO Auto-generated method stub
-
+		add(string);
 	}
 
 	public String at(final int index) {
-		// TODO Auto-generated method stub
-		return null;
+		return node.at(index);
 	}
 }

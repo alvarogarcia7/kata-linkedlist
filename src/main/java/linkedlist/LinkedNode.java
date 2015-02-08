@@ -27,4 +27,12 @@ public class LinkedNode implements Node {
 		return value + ", " + node.getDebugValues();
 	}
 
+	public String at(final int index) {
+		if (index == 0) {
+			return value;
+		} else {
+			return node.at(index - 1);
+		}
+	}
+
 }
