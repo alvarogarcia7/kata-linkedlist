@@ -48,6 +48,7 @@ public class MyLinkedListShould {
 		sut.add("otherString");
 
 		sut.addAt(1, "myString");
+
 		assertThat(sut.at(0), is("otherString"));
 		assertThat(sut.at(1), is("myString"));
 	}

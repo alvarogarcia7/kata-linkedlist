@@ -42,7 +42,8 @@ public class LinkedNode implements Node {
 			newNode.node = this;
 			return newNode;
 		} else {
-			return node.addAt(index - 1, string);
+			node = node.addAt(index - 1, string);
+			return this;
 		}
 	}
 

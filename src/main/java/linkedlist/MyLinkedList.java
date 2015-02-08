@@ -26,11 +26,7 @@ public class MyLinkedList {
 	}
 
 	public void addAt(final int index, final String string) {
-		if (0 == index) {
-			node = node.addAt(index, string);
-		} else {
-			add(string);
-		}
+		node = node.addAt(index, string);
 	}
 
 	public String at(final int index) {
