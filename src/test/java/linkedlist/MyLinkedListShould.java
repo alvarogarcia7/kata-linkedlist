@@ -86,7 +86,13 @@ public class MyLinkedListShould {
 		assertThat(sut.contains("string1"), is(true));
 		assertThat(sut.contains("string2"), is(true));
 		assertThat(sut.contains("string3"), is(true));
+	}
 
+	@Test
+	public void contain_other_objects() {
+		final MyLinkedList<Integer> localSut = new MyLinkedList<Integer>();
+		localSut.add(1);
+		assertThat(localSut.contains(1), is(true));
 	}
 
 }
