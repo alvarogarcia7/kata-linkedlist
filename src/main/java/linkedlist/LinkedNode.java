@@ -1,21 +1,21 @@
 package linkedlist;
 
-public class LinkedNode implements Node {
+public class LinkedNode<Type> implements Node<Type> {
 
-	private Node node;
-	private final String value;
+	private Node<Type> node;
+	private final Type value;
 
-	public LinkedNode(final String string) {
+	public LinkedNode(final Type string) {
 		value = string;
-		node = new EmptyNode();
+		node = new EmptyNode<Type>();
 	}
 
-	public Node add(final String string) {
+	public Node<Type> add(final Type string) {
 		node = node.add(string);
 		return this;
 	}
 
-	public Boolean contains(final String string) {
+	public Boolean contains(final Type string) {
 		return value.equals(string) || node.contains(string);
 	}
 
@@ -28,7 +28,7 @@ public class LinkedNode implements Node {
 		return value + ", " + node.toString();
 	}
 
-	public String at(final int index) {
+	public Type at(final int index) {
 		if (index == 0) {
 			return value;
 		} else {
@@ -36,9 +36,9 @@ public class LinkedNode implements Node {
 		}
 	}
 
-	public Node addAt(final int index, final String string) {
+	public Node<Type> addAt(final int index, final Type string) {
 		if (0 == index) {
-			final LinkedNode newNode = new LinkedNode(string);
+			final LinkedNode<Type> newNode = new LinkedNode<Type>(string);
 			newNode.node = this;
 			return newNode;
 		} else {
