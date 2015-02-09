@@ -92,7 +92,9 @@ public class MyLinkedListShould {
 	public void contain_other_objects() {
 		final MyLinkedList<Integer> localSut = new MyLinkedList<Integer>();
 		localSut.add(1);
+		localSut.add(2);
 		assertThat(localSut.contains(1), is(true));
+		assertThat(localSut.contains(2), is(true));
 	}
 
 }
