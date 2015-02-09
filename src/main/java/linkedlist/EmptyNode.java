@@ -2,11 +2,11 @@ package linkedlist;
 
 public class EmptyNode<Type> implements Node<Type> {
 
-	public Node<Type> add(final String string) {
+	public Node<Type> add(final Type string) {
 		return new LinkedNode<Type>(string);
 	}
 
-	public Boolean contains(final String string) {
+	public Boolean contains(final Type string) {
 		return false;
 	}
 
@@ -19,11 +19,11 @@ public class EmptyNode<Type> implements Node<Type> {
 		return null;
 	}
 
-	public String at(final int index) {
+	public Type at(final int index) {
 		return null;
 	}
 
-	public Node<Type> addAt(final int index, final String string) {
+	public Node<Type> addAt(final int index, final Type string) {
 		if (index == 0) {
 			return add(string);
 		}

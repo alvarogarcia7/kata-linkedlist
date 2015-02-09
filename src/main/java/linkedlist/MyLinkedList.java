@@ -12,11 +12,11 @@ public class MyLinkedList<Type> {
 		return node.size();
 	}
 
-	public void add(final String string) {
+	public void add(final Type string) {
 		node = node.add(string);
 	}
 
-	public Boolean contains(final String string) {
+	public Boolean contains(final Type string) {
 		return node.contains(string);
 	}
 
@@ -25,11 +25,11 @@ public class MyLinkedList<Type> {
 		return "[" + node.toString() + "]";
 	}
 
-	public void addAt(final int index, final String string) {
+	public void addAt(final int index, final Type string) {
 		node = node.addAt(index, string);
 	}
 
-	public String at(final int index) {
+	public Type at(final int index) {
 		return node.at(index);
 	}
 }

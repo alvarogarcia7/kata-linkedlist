@@ -2,16 +2,16 @@ package linkedlist;
 
 public interface Node<Type> {
 
-	Node<Type> add(String string);
+	Node<Type> add(Type string);
 
-	Boolean contains(String string);
+	Boolean contains(Type string);
 
 	Integer size();
 
 	String toString();
 
-	String at(int index);
+	Type at(int index);
 
-	Node<Type> addAt(int index, String string);
+	Node<Type> addAt(int index, Type string);
 
 }
