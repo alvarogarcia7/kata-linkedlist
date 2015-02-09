@@ -2,10 +2,10 @@ package linkedlist;
 
 public class MyLinkedList<Type> {
 
-	private Node node;
+	private Node<Type> node;
 
 	public MyLinkedList() {
-		node = new EmptyNode();
+		node = new EmptyNode<Type>();
 	}
 
 	public Integer size() {

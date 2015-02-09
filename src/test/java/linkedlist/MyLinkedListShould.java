@@ -8,11 +8,11 @@ import org.junit.Test;
 
 public class MyLinkedListShould {
 
-	private MyLinkedList sut;
+	private MyLinkedList<String> sut;
 
 	@Before
 	public void setUp() {
-		sut = new MyLinkedList();
+		sut = new MyLinkedList<String>();
 	}
 
 	@Test

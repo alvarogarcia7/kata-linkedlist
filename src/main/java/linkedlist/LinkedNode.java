@@ -1,16 +1,16 @@
 package linkedlist;
 
-public class LinkedNode implements Node {
+public class LinkedNode<Type> implements Node<Type> {
 
-	private Node node;
+	private Node<Type> node;
 	private final String value;
 
 	public LinkedNode(final String string) {
 		value = string;
-		node = new EmptyNode();
+		node = new EmptyNode<Type>();
 	}
 
-	public Node add(final String string) {
+	public Node<Type> add(final String string) {
 		node = node.add(string);
 		return this;
 	}
@@ -36,9 +36,9 @@ public class LinkedNode implements Node {
 		}
 	}
 
-	public Node addAt(final int index, final String string) {
+	public Node<Type> addAt(final int index, final String string) {
 		if (0 == index) {
-			final LinkedNode newNode = new LinkedNode(string);
+			final LinkedNode<Type> newNode = new LinkedNode<Type>(string);
 			newNode.node = this;
 			return newNode;
 		} else {

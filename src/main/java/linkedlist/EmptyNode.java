@@ -1,9 +1,9 @@
 package linkedlist;
 
-public class EmptyNode implements Node {
+public class EmptyNode<Type> implements Node<Type> {
 
-	public Node add(final String string) {
-		return new LinkedNode(string);
+	public Node<Type> add(final String string) {
+		return new LinkedNode<Type>(string);
 	}
 
 	public Boolean contains(final String string) {
@@ -23,7 +23,7 @@ public class EmptyNode implements Node {
 		return null;
 	}
 
-	public Node addAt(final int index, final String string) {
+	public Node<Type> addAt(final int index, final String string) {
 		if (index == 0) {
 			return add(string);
 		}

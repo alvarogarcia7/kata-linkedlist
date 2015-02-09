@@ -1,8 +1,8 @@
 package linkedlist;
 
-public interface Node {
+public interface Node<Type> {
 
-	Node add(String string);
+	Node<Type> add(String string);
 
 	Boolean contains(String string);
 
@@ -12,6 +12,6 @@ public interface Node {
 
 	String at(int index);
 
-	Node addAt(int index, String string);
+	Node<Type> addAt(int index, String string);
 
 }
