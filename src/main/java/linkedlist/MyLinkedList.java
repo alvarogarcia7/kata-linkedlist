@@ -1,6 +1,6 @@
 package linkedlist;
 
-public class MyLinkedList {
+public class MyLinkedList<Type> {
 
 	private Node node;
 
