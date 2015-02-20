@@ -1,7 +1,7 @@
 package linkedlist;
 
 import static org.hamcrest.Matchers.is;
-import static org.junit.Assert.assertThat;
+import static org.junit.Assert.*;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -95,6 +95,18 @@ public class MyLinkedListShould {
 		localSut.add(2);
 		assertThat(localSut.contains(1), is(true));
 		assertThat(localSut.contains(2), is(true));
+	}
+
+	@Test
+	public void apply_an_operation_to_each_element() throws Exception {
+		final MyLinkedList<Integer> localSut = new MyLinkedList<Integer>();
+		localSut.add(1);
+		localSut.add(2);
+
+		localSut.each(x->x+1);
+
+		assertThat(localSut.at(0), is(2));
+		assertThat(localSut.at(1), is(3));
 	}
 
 }
