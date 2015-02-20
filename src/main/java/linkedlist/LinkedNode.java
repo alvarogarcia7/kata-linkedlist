@@ -1,5 +1,7 @@
 package linkedlist;
 
+import java.util.function.Function;
+
 public class LinkedNode<Type> implements Node<Type> {
 
 	private Node<Type> node;
@@ -10,15 +12,18 @@ public class LinkedNode<Type> implements Node<Type> {
 		node = new EmptyNode<Type>();
 	}
 
+	@Override
 	public Node<Type> add(final Type string) {
 		node = node.add(string);
 		return this;
 	}
 
+	@Override
 	public Boolean contains(final Type string) {
 		return value.equals(string) || node.contains(string);
 	}
 
+	@Override
 	public Integer size() {
 		return 1 + node.size();
 	}
@@ -28,6 +33,7 @@ public class LinkedNode<Type> implements Node<Type> {
 		return value + ", " + node.toString();
 	}
 
+	@Override
 	public Type at(final int index) {
 		if (index == 0) {
 			return value;
@@ -36,6 +42,7 @@ public class LinkedNode<Type> implements Node<Type> {
 		}
 	}
 
+	@Override
 	public Node<Type> addAt(final int index, final Type string) {
 		if (0 == index) {
 			final LinkedNode<Type> newNode = new LinkedNode<Type>(string);
@@ -45,6 +52,13 @@ public class LinkedNode<Type> implements Node<Type> {
 			node = node.addAt(index - 1, string);
 			return this;
 		}
+	}
+
+	@Override
+	public Node<Type> each(final Function<Type, Type> function) {
+		final LinkedNode<Type> linkedNode = new LinkedNode<>(function.apply(value));
+		linkedNode.node = node.each(function);
+		return linkedNode;
 	}
 
 }

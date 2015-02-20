@@ -1,7 +1,7 @@
 package linkedlist;
 
 import static org.hamcrest.Matchers.is;
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertThat;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -103,10 +103,10 @@ public class MyLinkedListShould {
 		localSut.add(1);
 		localSut.add(2);
 
-		localSut.each(x->x+1);
+		final MyLinkedList<Integer> each = localSut.each(x -> x + 1);
 
-		assertThat(localSut.at(0), is(2));
-		assertThat(localSut.at(1), is(3));
+		assertThat(each.at(0), is(2));
+		assertThat(each.at(1), is(3));
 	}
 
 }

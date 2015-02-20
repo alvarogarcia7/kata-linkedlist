@@ -1,5 +1,7 @@
 package linkedlist;
 
+import java.util.function.Function;
+
 public interface Node<Type> {
 
 	Node<Type> add(Type string);
@@ -8,10 +10,13 @@ public interface Node<Type> {
 
 	Integer size();
 
+	@Override
 	String toString();
 
 	Type at(int index);
 
 	Node<Type> addAt(int index, Type string);
+
+	Node<Type> each(Function<Type, Type> mapper);
 
 }

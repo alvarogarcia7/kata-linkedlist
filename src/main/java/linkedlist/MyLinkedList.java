@@ -1,5 +1,7 @@
 package linkedlist;
 
+import java.util.function.Function;
+
 public class MyLinkedList<Type> {
 
 	private Node<Type> node;
@@ -31,5 +33,10 @@ public class MyLinkedList<Type> {
 
 	public Type at(final int index) {
 		return node.at(index);
+	}
+
+	public MyLinkedList<Type> each(final Function<Type, Type> mapper) {
+		node = node.each(mapper);
+		return this;
 	}
 }
