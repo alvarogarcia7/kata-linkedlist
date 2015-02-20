@@ -17,17 +17,16 @@ public class MyLinkedListOfIntegersShould {
 
 	@Test
 	public void contain_objects() {
-		localSut.add(1);
-		localSut.add(2);
+		addBasicDataset();
 
 		assertThat(localSut.contains(1), is(true));
 		assertThat(localSut.contains(2), is(true));
 	}
 
+
 	@Test
 	public void apply_a_map_to_the_same_type() throws Exception {
-		localSut.add(1);
-		localSut.add(2);
+		addBasicDataset();
 
 		final MyLinkedList<Integer> each = localSut.each(x -> x + 1);
 
@@ -37,13 +36,17 @@ public class MyLinkedListOfIntegersShould {
 
 	@Test
 	public void apply_a_map_to_a_different_type() throws Exception {
-		localSut.add(1);
-		localSut.add(2);
+		addBasicDataset();
 
 		final MyLinkedList<String> each = localSut.each(x -> String.valueOf(x));
 
 		assertThat(each.at(0), is("1"));
 		assertThat(each.at(1), is("2"));
+	}
+
+	private void addBasicDataset() {
+		localSut.add(1);
+		localSut.add(2);
 	}
 
 }
