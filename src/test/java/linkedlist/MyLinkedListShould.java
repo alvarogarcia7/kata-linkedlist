@@ -115,7 +115,7 @@ public class MyLinkedListShould {
 		localSut.add(1);
 		localSut.add(2);
 
-		final MyLinkedList<Integer> each = localSut.each(x -> String.valueOf(x));
+		final MyLinkedList<String> each = localSut.each(x -> String.valueOf(x));
 
 		assertThat(each.at(0), is("1"));
 		assertThat(each.at(1), is("2"));

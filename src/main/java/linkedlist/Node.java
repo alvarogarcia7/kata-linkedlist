@@ -17,6 +17,6 @@ public interface Node<Type> {
 
 	Node<Type> addAt(int index, Type string);
 
-	Node<Type> each(Function<Type, Type> mapper);
+	<Result> Node<Result> each(Function<Type, Result> mapper);
 
 }

@@ -35,8 +35,9 @@ public class MyLinkedList<Type> {
 		return node.at(index);
 	}
 
-	public MyLinkedList<Type> each(final Function<Type, Type> mapper) {
-		node = node.each(mapper);
-		return this;
+	public <Result> MyLinkedList<Result> each(final Function<Type, Result> mapper) {
+		final MyLinkedList<Result> result = new MyLinkedList<Result>();
+		result.node = node.each(mapper);
+		return result;
 	}
 }

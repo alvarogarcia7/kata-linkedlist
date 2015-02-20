@@ -55,8 +55,8 @@ public class LinkedNode<Type> implements Node<Type> {
 	}
 
 	@Override
-	public Node<Type> each(final Function<Type, Type> function) {
-		final LinkedNode<Type> linkedNode = new LinkedNode<>(function.apply(value));
+	public <Result> Node<Result> each(final Function<Type, Result> function) {
+		final LinkedNode<Result> linkedNode = new LinkedNode<>(function.apply(value));
 		linkedNode.node = node.each(function);
 		return linkedNode;
 	}

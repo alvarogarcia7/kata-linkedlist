@@ -38,8 +38,7 @@ public class EmptyNode<Type> implements Node<Type> {
 	}
 
 	@Override
-	public Node<Type> each(final Function<Type, Type> mapper) {
-		// TODO Auto-generated method stub
+	public <Result> Node<Result> each(final Function<Type, Result> mapper) {
 		return null;
 	}
 
