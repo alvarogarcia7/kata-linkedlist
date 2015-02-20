@@ -109,4 +109,16 @@ public class MyLinkedListShould {
 		assertThat(each.at(1), is(3));
 	}
 
+	@Test
+	public void map_should_return_a_different_type() throws Exception {
+		final MyLinkedList<Integer> localSut = new MyLinkedList<Integer>();
+		localSut.add(1);
+		localSut.add(2);
+
+		final MyLinkedList<Integer> each = localSut.each(x -> String.valueOf(x));
+
+		assertThat(each.at(0), is("1"));
+		assertThat(each.at(1), is("2"));
+	}
+
 }
