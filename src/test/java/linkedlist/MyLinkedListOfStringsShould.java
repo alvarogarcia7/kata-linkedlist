@@ -6,7 +6,7 @@ import static org.junit.Assert.assertThat;
 import org.junit.Before;
 import org.junit.Test;
 
-public class MyLinkedListShould {
+public class MyLinkedListOfStringsShould {
 
 	private MyLinkedList<String> sut;
 
@@ -86,39 +86,6 @@ public class MyLinkedListShould {
 		assertThat(sut.contains("string1"), is(true));
 		assertThat(sut.contains("string2"), is(true));
 		assertThat(sut.contains("string3"), is(true));
-	}
-
-	@Test
-	public void contain_other_objects() {
-		final MyLinkedList<Integer> localSut = new MyLinkedList<Integer>();
-		localSut.add(1);
-		localSut.add(2);
-		assertThat(localSut.contains(1), is(true));
-		assertThat(localSut.contains(2), is(true));
-	}
-
-	@Test
-	public void apply_an_operation_to_each_element() throws Exception {
-		final MyLinkedList<Integer> localSut = new MyLinkedList<Integer>();
-		localSut.add(1);
-		localSut.add(2);
-
-		final MyLinkedList<Integer> each = localSut.each(x -> x + 1);
-
-		assertThat(each.at(0), is(2));
-		assertThat(each.at(1), is(3));
-	}
-
-	@Test
-	public void map_should_return_a_different_type() throws Exception {
-		final MyLinkedList<Integer> localSut = new MyLinkedList<Integer>();
-		localSut.add(1);
-		localSut.add(2);
-
-		final MyLinkedList<String> each = localSut.each(x -> String.valueOf(x));
-
-		assertThat(each.at(0), is("1"));
-		assertThat(each.at(1), is("2"));
 	}
 
 }
