@@ -7,7 +7,7 @@ public class PersistentList {
 	}
 
 	public PersistentList add(final String string) {
-		return this;
+		return new PersistentList();
 	}
 
 }
