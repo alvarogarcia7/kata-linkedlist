@@ -40,12 +40,11 @@ public class PersistentListShould {
 	}
 
 	@Test
-	//TODO AGB fix this name - not good enough
-	public void be_independent() throws Exception {
+	public void modify_size_according_to_add() throws Exception {
 		final PersistentList oneElement = new PersistentList().add("a");
-		final PersistentList twoElements = oneElement.add("b");
-
 		assertThat(oneElement.size(), is(1));
+
+		final PersistentList twoElements = oneElement.add("b");
 		assertThat(twoElements.size(), is(2));
 	}
 
