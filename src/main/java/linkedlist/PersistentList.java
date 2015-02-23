@@ -4,6 +4,7 @@ public class PersistentList {
 
 	private String value;
 	private int size = 0;
+	private PersistentList next;
 
 	public int size() {
 		return size;
@@ -13,6 +14,7 @@ public class PersistentList {
 		final PersistentList result = new PersistentList();
 		result.size = size + 1;
 		result.value = string;
+		result.next = this;
 		return result;
 	}
 
@@ -20,7 +22,7 @@ public class PersistentList {
 		if (size == 0) {
 			return false;
 		}
-		return value.equals(element);
+		return value.equals(element) || next.contains(element);
 	}
 
 }
