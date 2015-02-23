@@ -80,7 +80,7 @@ public class PersistentListShould {
 
 	@Test
 	//TODO AGB name not good enough
-	public void not_contain_elements_that_havent_been_inserted() throws Exception {
+	public void not_contain_the_element_when_the_only_element_is_not_matching() throws Exception {
 		final PersistentList emptyList = new PersistentList();
 
 		final PersistentList oneElement = emptyList.add("b");
