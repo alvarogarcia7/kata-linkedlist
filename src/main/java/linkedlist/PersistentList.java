@@ -6,4 +6,8 @@ public class PersistentList {
 		return 0;
 	}
 
+	public PersistentList add(final String string) {
+		return this;
+	}
+
 }
