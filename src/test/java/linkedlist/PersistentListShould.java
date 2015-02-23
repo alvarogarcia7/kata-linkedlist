@@ -39,4 +39,14 @@ public class PersistentListShould {
 		assertThat(oneElement.size(), is(2));
 	}
 
+	@Test
+	//TODO AGB fix this name - not good enough
+	public void be_independent() throws Exception {
+		final PersistentList oneElement = new PersistentList().add("a");
+		final PersistentList twoElements = oneElement.add("b");
+
+		assertThat(oneElement.size(), is(1));
+		assertThat(twoElements.size(), is(2));
+	}
+
 }
