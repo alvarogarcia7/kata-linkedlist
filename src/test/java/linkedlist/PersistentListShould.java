@@ -23,7 +23,13 @@ public class PersistentListShould {
 		final PersistentList oneElement = sut.add("a");
 
 		assertThat(sut, not(equalTo(oneElement)));
+	}
 
+	@Test
+	public void add_one_element() throws Exception {
+		final PersistentList oneElement = new PersistentList().add("a");
+
+		assertThat(oneElement.size(), is(1));
 	}
 
 }
