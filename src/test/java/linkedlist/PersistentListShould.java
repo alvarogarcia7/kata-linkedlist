@@ -71,4 +71,11 @@ public class PersistentListShould {
 		assertThat(oneElement.contains("a"), is(true));
 	}
 
+	@Test
+	public void not_contain_elements_when_empty() throws Exception {
+		final PersistentList emptyList = new PersistentList();
+
+		assertThat(emptyList.contains("a"), is(false));
+	}
+
 }
