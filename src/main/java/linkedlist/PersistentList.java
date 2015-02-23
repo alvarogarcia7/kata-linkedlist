@@ -1,17 +1,20 @@
 package linkedlist;
 
+import java.util.Optional;
+
 public class PersistentList {
 
 	private String value;
 	private int size = 0;
-	private PersistentList next;
+	private final Optional<PersistentList> next;
 
 	public PersistentList() {
+		next = Optional.empty();
 	}
 
 	private PersistentList(final String value, final PersistentList next) {
 		this.value = value;
-		this.next = next;
+		this.next = Optional.of(next);
 	}
 
 	public int size() {
@@ -28,7 +31,7 @@ public class PersistentList {
 		if (size == 0) {
 			return false;
 		}
-		return value.equals(element) || next.contains(element);
+		return value.equals(element) || next.orElse(new PersistentList()).contains(element);
 	}
 
 }
