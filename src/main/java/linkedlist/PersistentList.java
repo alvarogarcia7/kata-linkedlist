@@ -14,7 +14,7 @@ public class PersistentList {
 		return result;
 	}
 
-	public boolean contains(final String string) {
+	public boolean contains(final String element) {
 		return true;
 	}
 
