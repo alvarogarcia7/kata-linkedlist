@@ -21,7 +21,6 @@ public class PersistentList {
 			return 1 + next.get().size();
 		}
 		return 0;
-
 	}
 
 	public PersistentList add(final String element) {
