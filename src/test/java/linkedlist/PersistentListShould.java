@@ -88,4 +88,14 @@ public class PersistentListShould {
 		assertThat(oneElement.contains("a"), is(false));
 	}
 
+	@Test
+	//TODO AGB name not good enough
+	public void not_contain_the_element_when_there_are_several_elements() throws Exception {
+		final PersistentList emptyList = new PersistentList();
+
+		final PersistentList severalElements = emptyList.add("a").add("b");
+
+		assertThat(severalElements.contains("a"), is(true));
+	}
+
 }
