@@ -33,6 +33,15 @@ public class PersistentListShould {
 	}
 
 	@Test
+	public void not_be_affected_by_adding_an_element() throws Exception {
+		final PersistentList emptyList = new PersistentList();
+
+		emptyList.add("a");
+
+		assertThat(emptyList.size(), is(0));
+	}
+
+	@Test
 	public void add_several_elements() throws Exception {
 		final PersistentList oneElement = new PersistentList().add("a").add("b");
 
