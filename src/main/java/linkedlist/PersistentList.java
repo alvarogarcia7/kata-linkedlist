@@ -9,9 +9,8 @@ public class PersistentList {
 	}
 
 	public PersistentList add(final String string) {
-		size++;
 		final PersistentList result = new PersistentList();
-		result.size = size;
+		result.size = size + 1;
 		return result;
 	}
 
