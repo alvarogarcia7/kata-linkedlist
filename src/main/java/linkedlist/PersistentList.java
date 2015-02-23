@@ -6,15 +6,21 @@ public class PersistentList {
 	private int size = 0;
 	private PersistentList next;
 
+	public PersistentList() {
+	}
+
+	private PersistentList(final String value, final PersistentList next) {
+		this.value = value;
+		this.next = next;
+	}
+
 	public int size() {
 		return size;
 	}
 
 	public PersistentList add(final String element) {
-		final PersistentList result = new PersistentList();
+		final PersistentList result = new PersistentList(element, this);
 		result.size = size + 1;
-		result.value = element;
-		result.next = this;
 		return result;
 	}
 
