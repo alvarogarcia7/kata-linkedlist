@@ -10,10 +10,10 @@ public class PersistentList {
 		return size;
 	}
 
-	public PersistentList add(final String string) {
+	public PersistentList add(final String element) {
 		final PersistentList result = new PersistentList();
 		result.size = size + 1;
-		result.value = string;
+		result.value = element;
 		result.next = this;
 		return result;
 	}
