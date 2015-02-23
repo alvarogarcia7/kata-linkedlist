@@ -14,4 +14,9 @@ public class PersistentList {
 		return result;
 	}
 
+	public boolean contains(final String string) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
 }

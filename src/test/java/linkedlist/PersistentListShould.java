@@ -62,4 +62,13 @@ public class PersistentListShould {
 		assertThat(twoElements.size(), is(2));
 	}
 
+	@Test
+	public void store_one_element() throws Exception {
+		final PersistentList sut = new PersistentList();
+
+		final PersistentList oneElement = sut.add("a");
+
+		assertThat(oneElement.contains("a"), is(true));
+	}
+
 }
