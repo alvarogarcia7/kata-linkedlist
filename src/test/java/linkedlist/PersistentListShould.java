@@ -32,4 +32,11 @@ public class PersistentListShould {
 		assertThat(oneElement.size(), is(1));
 	}
 
+	@Test
+	public void add_several_elements() throws Exception {
+		final PersistentList oneElement = new PersistentList().add("a").add("b");
+
+		assertThat(oneElement.size(), is(2));
+	}
+
 }
