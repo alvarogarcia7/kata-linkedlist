@@ -4,11 +4,12 @@ import java.util.Optional;
 
 public class PersistentList {
 
-	private String value;
+	private final String value;
 	private final Optional<PersistentList> next;
 
 	public PersistentList() {
 		next = Optional.empty();
+		value = null;
 	}
 
 	private PersistentList(final String value, final PersistentList next) {
