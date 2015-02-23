@@ -97,4 +97,13 @@ public class PersistentListShould {
 		assertThat(severalElements.contains("a"), is(true));
 	}
 
+	@Test
+	public void contain_the_last_element() throws Exception {
+		final PersistentList emptyList = new PersistentList();
+
+		final PersistentList severalElements = emptyList.add("b").add("a");
+
+		assertThat(severalElements.contains("b"), is(true));
+	}
+
 }
