@@ -5,7 +5,6 @@ import java.util.Optional;
 public class PersistentList {
 
 	private String value;
-	private int size = 0;
 	private final Optional<PersistentList> next;
 
 	public PersistentList() {
@@ -18,20 +17,24 @@ public class PersistentList {
 	}
 
 	public int size() {
-		return size;
+		if (next.isPresent()) {
+			return 1 + next.get().size();
+		}
+		return 0;
+
 	}
 
 	public PersistentList add(final String element) {
 		final PersistentList result = new PersistentList(element, this);
-		result.size = size + 1;
 		return result;
 	}
 
 	public boolean contains(final String element) {
-		if (size == 0) {
-			return false;
+		if (next.isPresent()) {
+			return value.equals(element) || next.orElse(new PersistentList()).contains(element);
 		}
-		return value.equals(element) || next.orElse(new PersistentList()).contains(element);
+		return false;
+
 	}
 
 }
