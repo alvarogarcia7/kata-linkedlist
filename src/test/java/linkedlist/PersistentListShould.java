@@ -46,6 +46,20 @@ public class PersistentListShould {
 
 		final PersistentList twoElements = oneElement.add("b");
 		assertThat(twoElements.size(), is(2));
+
+		final PersistentList twoElements_2 = oneElement.add("c");
+		assertThat(twoElements_2.size(), is(2));
+	}
+
+	@Test
+	public void acceptance_test() throws Exception {
+		final PersistentList oneElement = new PersistentList().add("a");
+		assertThat(oneElement.size(), is(1));
+
+		final PersistentList twoElements = oneElement.add("b");
+		twoElements.add("c");
+		twoElements.add("a");
+		assertThat(twoElements.size(), is(2));
 	}
 
 }
