@@ -2,12 +2,16 @@ package linkedlist;
 
 public class PersistentList {
 
+	private int size = 0;
+
 	public int size() {
-		return 0;
+		return size;
 	}
 
 	public PersistentList add(final String string) {
-		return new PersistentList();
+		final PersistentList result = new PersistentList();
+		result.size = 1;
+		return result;
 	}
 
 }
