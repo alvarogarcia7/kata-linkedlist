@@ -24,8 +24,7 @@ public class PersistentList {
 	}
 
 	public PersistentList add(final String element) {
-		final PersistentList result = new PersistentList(element, this);
-		return result;
+		return new PersistentList(element, this);
 	}
 
 	public boolean contains(final String element) {
